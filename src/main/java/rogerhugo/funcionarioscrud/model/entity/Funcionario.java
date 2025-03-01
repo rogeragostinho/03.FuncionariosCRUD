@@ -8,16 +8,8 @@ package rogerhugo.funcionarioscrud.model.entity;
  *
  * @author Róger Hugo
  */
-public abstract class Funcionario {
+public class Funcionario {
     private int id;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
     private String nome;
     private int idade;
 
@@ -25,7 +17,20 @@ public abstract class Funcionario {
         this.nome = nome;
         this.idade = idade;
     }
+    
+    public Funcionario( int id, String nome, int idade) {
+        this(nome, idade);
+        this.id = id;
+    }
+    
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public String getNome() {
         return nome;
     }
@@ -35,7 +40,7 @@ public abstract class Funcionario {
     }
 
     public int getIdade() {
-        return idade;
+        return this.idade;
     }
 
     public void setIdade(int idade) {

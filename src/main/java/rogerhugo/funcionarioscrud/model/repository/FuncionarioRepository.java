@@ -58,4 +58,8 @@ public class FuncionarioRepository {
         return null;
     }
     
+    public int pegarProximoId() {
+        return this.quantidade + 1;
+    }    
+    
 }
